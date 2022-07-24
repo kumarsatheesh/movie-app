@@ -1,8 +1,8 @@
 // import package
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
-// import helpers
-import isEmpty from "../config/isEmpty";
+// const helpers
+const isEmpty = require("../config/isEmpty");
 
 /**
  * User Login
@@ -10,7 +10,7 @@ import isEmpty from "../config/isEmpty";
  * METHOD: POST
  * BODY : email, phoneNo, phoneCode, loginType (1-mobile, 2-email), password
  */
-export const userLoginValidation = (req, res, next) => {
+exports.userLoginValidation = (req, res, next) => {
   let errors = {},
     reqBody = req.body;
   let emailRegex =
@@ -36,7 +36,7 @@ export const userLoginValidation = (req, res, next) => {
 
 
 
-export const movieValidation = (req, res, next) => {
+exports.movieValidation = (req, res, next) => {
   let errors = {},
     reqBody = req.body;
 

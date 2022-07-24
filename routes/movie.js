@@ -1,12 +1,12 @@
-//  import packages
-import express from "express";
-import passport from "passport";
+//   packages
+const express = require("express");
+const passport = require("passport");
 
-// import controllers
-import * as movieCtrl from "../controllers/movie.controller";
+//  controllers
+const movieCtrl = require("../controllers/movie.controller");
 
 //validations
-import * as userValidation from "../validation/user.validation";
+const userValidation = require("../validation/user.validation");
 
 const router = express();
 const passportAuth = passport.authenticate("adminAuth", { session: false });
@@ -34,4 +34,4 @@ router
   );
 
 
-export default router;
+module.exports = router;

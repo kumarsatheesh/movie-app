@@ -1,12 +1,12 @@
 //  import packages
-import express from "express";
-import passport from "passport";
+const express = require("express");
+const passport = require("passport");
 
-// import controllers
-import * as userCtrl from "../controllers/user.controller";
+// const controllers
+const userCtrl = require("../controllers/user.controller");
 
 //validations
-import * as userValidation from "../validation/user.validation";
+const userValidation = require("../validation/user.validation");
 
 const router = express();
 
@@ -18,4 +18,4 @@ router
 
 
 
-export default router;
+module.exports = router;

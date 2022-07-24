@@ -1,22 +1,24 @@
 // import packages
-import express from "express";
-import cors from "cors";
-import https from "https";
-import http from "http";
-import bodyParser from "body-parser";
-import mongoose from "mongoose";
-import morgan from "morgan";
-import passport from "passport";
-import path from "path";
-import cookieParser from "cookie-parser";
+const express = require("express");
+const cors = require("cors");
+const https = require("https");
+const http = require("http");
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+const morgan = require("morgan");
+const passport = require("passport");
+const path = require("path");
+const cookieParser = require("cookie-parser");
 
-// import routes
-import movie from "./routes/movie";
-import user from "./routes/user";
+
+
+// const  routes
+const movie = require("./routes/movie.js");
+const user = require("./routes/user.js");
 
 
 // config
-import config from "./config/config";
+const config = require("./config/config");
 
 const app = express();
 const server = http.createServer(app);

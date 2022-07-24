@@ -1,9 +1,9 @@
 // import package
-import mongoose from 'mongoose';
-import jwt from 'jsonwebtoken';
+const mongoose = require('mongoose');
+const jwt = require('jsonwebtoken');
 
-// import lib
-import config from '../config/config';
+//  lib
+const config = require('../config/config');
 
 const Schema = mongoose.Schema;
 
@@ -32,4 +32,4 @@ AdminSchema.methods.generateJWT = function (payload) {
 
 const Admin = mongoose.model("admin", AdminSchema, "admin");
 
-export default Admin;
+module.exports = Admin;

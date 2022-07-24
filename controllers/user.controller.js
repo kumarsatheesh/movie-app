@@ -1,13 +1,13 @@
 // import package
 
 // import modal
-import Admin from "../models/admin";
+const Admin = require("../models/admin");
 
-import bcrypt from "bcrypt";
+const bcrypt = require("bcrypt");
 
 
 
-export const userLogin = async (req, res) => {
+exports.userLogin = async (req, res) => {
   try {
     let reqBody = req.body,
       checkUser;

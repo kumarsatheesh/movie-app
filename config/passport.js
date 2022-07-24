@@ -3,7 +3,7 @@ const JwtStrategy = require("passport-jwt").Strategy,
   ExtractJwt = require("passport-jwt").ExtractJwt;
 
 //import function
-import config from "./config";
+const config = require("./config");
 
 var cookieExtractor = function (req) {
   var token = null;
@@ -16,10 +16,10 @@ opts.jwtFromRequest = cookieExtractor;
 opts.secretOrKey = config.secretOrKey;
 
 //import model
-import Admin from "../models/admin";
+const Admin = require("../models/admin");
 
 
-export const adminAuth = (passport) => {
+exports.adminAuth = (passport) => {
   passport.use(
     "adminAuth",
     new JwtStrategy(opts, async function (jwt_payload, done) {
