@@ -4,7 +4,7 @@
   "description": "task",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon babel_hook.js",
+    "start": "node babel_hook.js",
     "server": "NODE_ENV=production node babel_hook.js"
   },
   "author": "Satheeshkumar",
